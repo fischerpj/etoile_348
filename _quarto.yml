@@ -2,22 +2,23 @@ project:
   type: book
 
 book:
-  title: "etoile_348"
-  author: "Norah Jones"
-  date: "10/23/2024"
+  title: "etoile348"
+  subtitle: "cuisine"
+  author: "granPiero"
+  date: now
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
-    - references.qmd
-
-bibliography: references.bib
+    - BOM.qmd
+    - fournisseur.qmd
+    - etoile_rooms.qmd
+    - plans.qmd
 
 format:
-  html:
-    theme: cosmo
   pdf:
     documentclass: scrreprt
-
+    geometry: "left=2cm,right=2cm,top=1cm,bottom=1cm"
+  html:
+    theme: cosmo
 editor: visual
 

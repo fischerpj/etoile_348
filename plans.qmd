@@ -1,0 +1,47 @@
+---
+title: "plans et dimensions"
+---
+
+## cuisine surface mur & plafond 
+
+- plafond = 8 m2 et murs = 16 m2
+
+```{r, echo=FALSE}
+dims <- list(
+  h=2.43,
+  L=2.90,
+  l=2.77,
+  l_porte = 0.83,
+  h_porte = 2.06,
+  l_fenetre= 1.30,
+  h_fenetre= 2.26
+)
+
+newdims <- within(dims,{
+  m1 = h*L
+  m2 = 2*h*l
+  porte = -h_porte*l_porte
+  fenetre = -h_fenetre*l_fenetre
+  murs = m1+m2+porte+fenetre
+  plafond = l*L
+  })
+
+newdims |> as.data.frame() |> 
+  tidyr::pivot_longer(cols= everything(), values_to="value") |>
+  gt::gt()
+```
+
+
+## dimensions
+
+-   positionner les arrivées
+
+![mes_dimensions](images/2314_CUISINE_PLAN_IMG_20230406_141910.jpg){width="450"}
+
+![mes_elements](images/2314_CUISINE_ELEMENTS_IMG_20230406_141849.jpg){width="450"}
+
+## projections
+
+-   relever dimensions; H, l, profondeur, VOLUME en dm3
+
+![Cuisinella à 7600 €](images/cuisinella/Visuel2.jpg){width="450"}

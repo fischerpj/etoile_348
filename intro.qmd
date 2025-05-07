@@ -1,9 +1,15 @@
-# Introduction
+# Synthèse
 
-This is a book created from markdown and executable code.
+Une cuisine complètement équipée de 290 cm en ligne (non en L) avec éléments et portes prémontés en panneaux de mélamine de 18 mm avec poignées , étagères disposent d'un mécanisme de verrouillage breveté, colonnes jusqu'au plafond et en retrait à hauteur de tête, tiroir avec fermeture amortie, plan de travail pre-perce et crédence, évier en inox, Le sol sera en dalles PVC. La cuisine et les appareils ( à spécifier ) installée pour 2025Q1 par cusiniste et par pepo pour sol et mur. Le budget prévisionnel se monte à 5K. **Calculer comparativement le prix au m2 linéaire et prix au dm3**
 
-See @knuth84 for additional discussion of literate programming.
+## appareils électroménagers de qualité
 
-```{r}
-1 + 1
-```
+-   Four: Classe énergétique A
+
+-   Plaque de cuisson vitrocéramique
+
+-   Lave-vaisselle
+
+-   Hotte : Classe énergétique D
+
+-   Frigo : logement oui, fourniture: Non

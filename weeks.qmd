@@ -1,0 +1,11 @@
+---
+title: "Week Calendar"
+---
+
+
+```{r, echo= FALSE}
+week <- 7:12
+cal <- data.frame(week)
+cal |> gt::gt()
+```
+

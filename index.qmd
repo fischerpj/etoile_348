@@ -1,9 +1,7 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+Pour l'appartement de l'Etoile, dont Projet Cuisine.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+## équipements
 
-```{r}
-1 + 1
-```
+v La cuisine est équipée d'appareils électroménagers de qualité des marques Candy (Group Haier) et Elica. Four Candy : Classe énergétique A Plaque de cuisson vitrocéramique Candy Hotte Elica : Classe énergétique D Lave-vaisselle Candy : Indice de reparabilité 5.6 Frigo Candy : Classe énergétique F

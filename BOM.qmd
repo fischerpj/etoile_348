@@ -1,0 +1,58 @@
+---
+title: "Bill of Materials"
+---
+
+-   APPRO_PEINTURE: {quantité, plafond, murs, pinceaux,}
+-   OUTILS: {maillet, cales, cutter, scie sauteuse-vérif, lampe, spots}
+-   OTER: {R20, R20b}
+-   SOL: {dépose, technique, pose, seuil}
+-   PREPA: {Nouet}
+-   DECO: {ragréage, peinture}
+-   CUISINE: {livraison, installation}
+-   LUMIERE: {plafond, étagère, test spot}
+
+```{r BOM, echo=FALSE}
+bom <-  tibble::tribble(
+    ~week, ~status, ~nodeid, ~chapter, ~desc, ~surf, ~comment, 
+       "09","todo","R00", "vacances", "plancher", 12, "LAURE", 
+     "06","done","R01", "specs", "plancher", 12, "definition", 
+    "07","todo","R02", "planification","plancher", 12, "objectif W13", 
+    "07","todo","R02b", "APPRO","plancher", 12, "achat_PEINTURE", 
+    "08","todo","R02c", "APPRO","plancher", 12, "rassembler outils, tester spot", 
+    "06","done","R03", "financement","plancher", 12, "budget total", 
+    "06","done","R04", "projection", "plancher", 12, "rendu 3D", 
+    "06","done","R15", "cuisiniste", "plancher", 12, "selection&contrat", 
+    "06","done","R04b", "meubles","plancher", 12, "detail volume", 
+    "08","todo","R04d", "APPRO","plancher", 12, "table induction NOW", 
+    "06","done","R04c", "SOL", "plancher", 12, "fournir dalles pvc", 
+    "10","todo","R20", "OTER", "plancher", 12, "1.frigo-buffet-fer, 2.meuble hauts",
+    "06","done","R21", "DECO", "plancher", 12, "ôter CARRELAGE",
+    "12","todo","R23b", "DECO", "plancher", 12, "ragréer, peindre MURS",
+    "10","todo","R23", "DECO", "plancher", 12, "re-peindre plafond",
+    "12","todo","R25", "SOL", "plancher", 12, "ôter, fourniture et pose", 
+    "13","todo","R25c", "CUISINE","plancher", 12, "installer W13", 
+    "12","todo","R25b", "CUISINE","plancher", 12, "livraison W12", 
+    "11", "done","R22b", "MURS","plancher", 12, "déplacer EAU", 
+    "11","todo","R22", "REFAIRE","plancher", 12, "NOUET eau+elec", 
+    "11","todo","R20b", "OTER", "plancher", 12, "3.cuisinière, 4.évier",
+    "13","todo","R31", "lumiere","plancher", 12, "brancher", 
+    "13","todo","R32", "TEST","plancher", 12, "fonctionement", 
+    "14","todo","R32", "REVENTE","plancher", 12, "cuisinière, meuble bas", 
+  ) 
+
+bom_result <- bom |>
+    dplyr::select(-dplyr::matches("^surf|^desc")) |>
+    dplyr::arrange(desc(status),nodeid)  |>
+    dplyr::filter(status=="todo") |>
+    data.table::data.table()
+
+bom_result |>
+  dplyr::select(-dplyr::matches("^super|^surf|^isout|^h$|^Xcomment|^type|^ajust")) |>
+  dplyr::arrange(week) |>
+  gt::gt() |>
+  gt::tab_header('Caldndrier des Travaux')
+```
+
+```{r TABLE, echo=FALSE}
+
+```

@@ -1,0 +1,37 @@
+---
+title: "Fournisseurs"
+---
+
+-   SOLS: Castorama, ST Maclou, decoweb, bricofloor,
+
+```{r, echo=FALSE}
+library(etoile348)
+
+etoile_fournisseur_() |>
+  dplyr::select(-dplyr::matches("^super|^surf|^isout|^h$|^Xcomment|^type|^ajust")) |>
+  gt::gt()
+```
+
+1.  comera: FR, 20ans, sur-mesure, ZAC du Fenouillet, Avenue du Languedoc
+
+    34470 - PÉROLS
+
+2.  socooc, FR chemin de Soriech
+
+3.  cuisine_plus, EUR, sur-mesure
+
+4.  KO envia, FR+DE
+
+5.  castorama
+
+6.  ikea
+
+7.  NO ixina
+
+8.  Darty le Fenouillet
+
+9.  Leroy Merlin
+
+10. Lapeyre le Fenouillet
+
+Quelle est la meilleure période pour changer de cuisine ? **Il existe en effet des moments dans l’année où les prix des cuisines baissent, par exemple pendant les soldes, les vacances ou encore en début d’année**.
